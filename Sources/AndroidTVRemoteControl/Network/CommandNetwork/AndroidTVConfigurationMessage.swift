@@ -72,7 +72,7 @@ extension CommandNetwork {
             return model.count + vendor.count + version.count + appBuild.count + appName.count
         }
         
-        init(_ model: String, _ vendor: String, _ version: String, _ appName: String, _ appBuild: String) {
+        public init(_ model: String, _ vendor: String, _ version: String, _ appName: String, _ appBuild: String) {
             self.model = model
             self.vendor = vendor
             self.version = version
