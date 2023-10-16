@@ -9,8 +9,10 @@ import Foundation
 import CryptoKit
 
 public class CryptoManager {
-    public  var clientPublicCertificate: (() -> Result<SecKey>)?
-    public  var serverPublicCertificate: (() -> Result<SecKey>)?
+    public var clientPublicCertificate: (() -> Result<SecKey>)?
+    public var serverPublicCertificate: (() -> Result<SecKey>)?
+    
+    public init() {}
     
     func getEncodedCert(_ code: String) -> Result<[UInt8]> {
         if code.count != 6 {
