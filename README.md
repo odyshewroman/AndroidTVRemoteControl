@@ -4,7 +4,7 @@
 [![SPM Compatible](https://img.shields.io/badge/SPM-Compatible-brightgreen.svg)](https://swift.org/package-manager)
 [![CocoaPods](https://img.shields.io/cocoapods/v/YourLibraryName.svg)](https://cocoapods.org/pods/AndroidTVRemoteControl)
 
-This project it's implementation pairing and connection to Android TV OS devices, using protovol v2
+This project it's implementation pairing and connection to Android TV OS devices, using protovol v2, and follows the approach described here [Google TV (aka Android TV) Remote Control (v2)](https://github.com/Aymkdn/assistant-freebox-cloud/wiki/Google-TV-(aka-Android-TV)-Remote-Control-(v2)).
 
 ## Compatibility
 
