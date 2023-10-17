@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol RequestDataProtocol {
+public protocol RequestDataProtocol {
     var data: Data { get }
     var length: UInt8 { get }
 }

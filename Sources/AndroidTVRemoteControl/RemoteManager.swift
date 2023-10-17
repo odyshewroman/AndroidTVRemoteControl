@@ -62,6 +62,24 @@ public class RemoteManager {
         connection = nil
     }
     
+    public func send(_ request: RequestDataProtocol) {
+        send(Data([request.length]), request.data)
+    }
+    
+    public func send(_ data: Data, _ nextData: Data? = nil) {
+        connection?.send(content: data, completion: .contentProcessed({ [weak self] (error) in
+            if let error = error {
+                self?.remoteState = .error(.sendDataError(error))
+                self?.disconnect()
+                return
+            }
+            
+            if let nextMessage = nextData {
+                self?.send(nextMessage)
+            }
+        }))
+    }
+    
     private func handleConnectionState(_ state: NWConnection.State) {
         switch state {
         case .setup:
@@ -168,24 +186,6 @@ public class RemoteManager {
         data.removeAll()
         receive()
         return true
-    }
-    
-    private func send(_ request: RequestDataProtocol) {
-        send(Data([request.length]), request.data)
-    }
-    
-    private func send(_ data: Data, _ nextData: Data? = nil) {
-        connection?.send(content: data, completion: .contentProcessed({ [weak self] (error) in
-            if let error = error {
-                self?.remoteState = .error(.sendDataError(error))
-                self?.disconnect()
-                return
-            }
-            
-            if let nextMessage = nextData {
-                self?.send(nextMessage)
-            }
-        }))
     }
 }
 
