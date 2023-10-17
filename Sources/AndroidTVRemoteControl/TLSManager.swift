@@ -49,7 +49,7 @@ public class TLSManager {
 
             self?.secTrustClosure?(serverTrust)
             
-            // not check and accepr all certificates
+            // not check and accept all certificates
             completionHandler(true)
         }, queue)
         
