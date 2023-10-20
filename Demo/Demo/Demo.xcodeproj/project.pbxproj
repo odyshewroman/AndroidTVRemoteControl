@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C591B96C2AE1CEED00A50131 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B96B2AE1CEED00A50131 /* AppDelegate.swift */; };
+		C591B96E2AE1CEED00A50131 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B96D2AE1CEED00A50131 /* SceneDelegate.swift */; };
+		C591B9702AE1CEED00A50131 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B96F2AE1CEED00A50131 /* ViewController.swift */; };
+		C591B9752AE1CEEE00A50131 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C591B9742AE1CEEE00A50131 /* Assets.xcassets */; };
+		C591B9802AE2356800A50131 /* RemoteTVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B97F2AE2356800A50131 /* RemoteTVManager.swift */; };
+		C591B9B82AE23C7A00A50131 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9B12AE23C7A00A50131 /* Errors.swift */; };
+		C591B9B92AE23C7A00A50131 /* TLSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9B22AE23C7A00A50131 /* TLSManager.swift */; };
+		C591B9BA2AE23C7A00A50131 /* PairingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9B32AE23C7A00A50131 /* PairingManager.swift */; };
+		C591B9BB2AE23C7A00A50131 /* CryptoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9B42AE23C7A00A50131 /* CryptoManager.swift */; };
+		C591B9BC2AE23C7A00A50131 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9B52AE23C7A00A50131 /* Result.swift */; };
+		C591B9BD2AE23C7A00A50131 /* CertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9B62AE23C7A00A50131 /* CertManager.swift */; };
+		C591B9BE2AE23C7A00A50131 /* RemoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9B72AE23C7A00A50131 /* RemoteManager.swift */; };
+		C591B9C12AE23CA300A50131 /* RequestDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9C02AE23CA300A50131 /* RequestDataProtocol.swift */; };
+		C591B9C82AE23CBE00A50131 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9C32AE23CBE00A50131 /* Configuration.swift */; };
+		C591B9C92AE23CBE00A50131 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9C42AE23CBE00A50131 /* Option.swift */; };
+		C591B9CA2AE23CBE00A50131 /* Pairing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9C52AE23CBE00A50131 /* Pairing.swift */; };
+		C591B9CB2AE23CBE00A50131 /* PairingNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9C62AE23CBE00A50131 /* PairingNetwork.swift */; };
+		C591B9CC2AE23CBE00A50131 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9C72AE23CBE00A50131 /* Secret.swift */; };
+		C591B9D32AE23CD600A50131 /* CommandNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9CE2AE23CD600A50131 /* CommandNetwork.swift */; };
+		C591B9D42AE23CD600A50131 /* Ping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9CF2AE23CD600A50131 /* Ping.swift */; };
+		C591B9D52AE23CD600A50131 /* SecodConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9D02AE23CD600A50131 /* SecodConfiguration.swift */; };
+		C591B9D62AE23CD600A50131 /* SecondConfigurationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9D12AE23CD600A50131 /* SecondConfigurationResponse.swift */; };
+		C591B9D72AE23CD600A50131 /* AndroidTVConfigurationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9D22AE23CD600A50131 /* AndroidTVConfigurationMessage.swift */; };
+		C591B9DA2AE23E7F00A50131 /* cert.der in Resources */ = {isa = PBXBuildFile; fileRef = C591B9D82AE23E7F00A50131 /* cert.der */; };
+		C591B9DB2AE23E7F00A50131 /* cert.p12 in Resources */ = {isa = PBXBuildFile; fileRef = C591B9D92AE23E7F00A50131 /* cert.p12 */; };
+		C5D3739F2AE2EE4500BE7F37 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3739E2AE2EE4500BE7F37 /* Views.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C591B9682AE1CEED00A50131 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C591B96B2AE1CEED00A50131 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C591B96D2AE1CEED00A50131 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C591B96F2AE1CEED00A50131 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C591B9742AE1CEEE00A50131 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C591B9792AE1CEEE00A50131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C591B97F2AE2356800A50131 /* RemoteTVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTVManager.swift; sourceTree = "<group>"; };
+		C591B9B12AE23C7A00A50131 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = ../../../Sources/AndroidTVRemoteControl/Errors.swift; sourceTree = "<group>"; };
+		C591B9B22AE23C7A00A50131 /* TLSManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TLSManager.swift; path = ../../../Sources/AndroidTVRemoteControl/TLSManager.swift; sourceTree = "<group>"; };
+		C591B9B32AE23C7A00A50131 /* PairingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PairingManager.swift; path = ../../../Sources/AndroidTVRemoteControl/PairingManager.swift; sourceTree = "<group>"; };
+		C591B9B42AE23C7A00A50131 /* CryptoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CryptoManager.swift; path = ../../../Sources/AndroidTVRemoteControl/CryptoManager.swift; sourceTree = "<group>"; };
+		C591B9B52AE23C7A00A50131 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = ../../../Sources/AndroidTVRemoteControl/Result.swift; sourceTree = "<group>"; };
+		C591B9B62AE23C7A00A50131 /* CertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CertManager.swift; path = ../../../Sources/AndroidTVRemoteControl/CertManager.swift; sourceTree = "<group>"; };
+		C591B9B72AE23C7A00A50131 /* RemoteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemoteManager.swift; path = ../../../Sources/AndroidTVRemoteControl/RemoteManager.swift; sourceTree = "<group>"; };
+		C591B9C02AE23CA300A50131 /* RequestDataProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestDataProtocol.swift; path = ../../../Sources/AndroidTVRemoteControl/Network/RequestDataProtocol.swift; sourceTree = "<group>"; };
+		C591B9C32AE23CBE00A50131 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = ../../../Sources/AndroidTVRemoteControl/Network/PairingNetwork/Configuration.swift; sourceTree = "<group>"; };
+		C591B9C42AE23CBE00A50131 /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Option.swift; path = ../../../Sources/AndroidTVRemoteControl/Network/PairingNetwork/Option.swift; sourceTree = "<group>"; };
+		C591B9C52AE23CBE00A50131 /* Pairing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pairing.swift; path = ../../../Sources/AndroidTVRemoteControl/Network/PairingNetwork/Pairing.swift; sourceTree = "<group>"; };
+		C591B9C62AE23CBE00A50131 /* PairingNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PairingNetwork.swift; path = ../../../Sources/AndroidTVRemoteControl/Network/PairingNetwork/PairingNetwork.swift; sourceTree = "<group>"; };
+		C591B9C72AE23CBE00A50131 /* Secret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Secret.swift; path = ../../../Sources/AndroidTVRemoteControl/Network/PairingNetwork/Secret.swift; sourceTree = "<group>"; };
+		C591B9CE2AE23CD600A50131 /* CommandNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommandNetwork.swift; path = ../../../Sources/AndroidTVRemoteControl/Network/CommandNetwork/CommandNetwork.swift; sourceTree = "<group>"; };
+		C591B9CF2AE23CD600A50131 /* Ping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ping.swift; path = ../../../Sources/AndroidTVRemoteControl/Network/CommandNetwork/Ping.swift; sourceTree = "<group>"; };
+		C591B9D02AE23CD600A50131 /* SecodConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecodConfiguration.swift; path = ../../../Sources/AndroidTVRemoteControl/Network/CommandNetwork/SecodConfiguration.swift; sourceTree = "<group>"; };
+		C591B9D12AE23CD600A50131 /* SecondConfigurationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondConfigurationResponse.swift; path = ../../../Sources/AndroidTVRemoteControl/Network/CommandNetwork/SecondConfigurationResponse.swift; sourceTree = "<group>"; };
+		C591B9D22AE23CD600A50131 /* AndroidTVConfigurationMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AndroidTVConfigurationMessage.swift; path = ../../../Sources/AndroidTVRemoteControl/Network/CommandNetwork/AndroidTVConfigurationMessage.swift; sourceTree = "<group>"; };
+		C591B9D82AE23E7F00A50131 /* cert.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = cert.der; sourceTree = "<group>"; };
+		C591B9D92AE23E7F00A50131 /* cert.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cert.p12; sourceTree = "<group>"; };
+		C5D3739E2AE2EE4500BE7F37 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C591B9652AE1CEED00A50131 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C591B95F2AE1CEED00A50131 = {
+			isa = PBXGroup;
+			children = (
+				C591B96A2AE1CEED00A50131 /* Demo */,
+				C591B9692AE1CEED00A50131 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C591B9692AE1CEED00A50131 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C591B9682AE1CEED00A50131 /* Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C591B96A2AE1CEED00A50131 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				C591B9B02AE23C4700A50131 /* AndroidTVRemoteControl */,
+				C591B96B2AE1CEED00A50131 /* AppDelegate.swift */,
+				C591B96D2AE1CEED00A50131 /* SceneDelegate.swift */,
+				C5D3739E2AE2EE4500BE7F37 /* Views.swift */,
+				C591B96F2AE1CEED00A50131 /* ViewController.swift */,
+				C591B9742AE1CEEE00A50131 /* Assets.xcassets */,
+				C591B9D82AE23E7F00A50131 /* cert.der */,
+				C591B9D92AE23E7F00A50131 /* cert.p12 */,
+				C591B9792AE1CEEE00A50131 /* Info.plist */,
+				C591B97F2AE2356800A50131 /* RemoteTVManager.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		C591B9B02AE23C4700A50131 /* AndroidTVRemoteControl */ = {
+			isa = PBXGroup;
+			children = (
+				C591B9BF2AE23C8D00A50131 /* Network */,
+				C591B9B62AE23C7A00A50131 /* CertManager.swift */,
+				C591B9B42AE23C7A00A50131 /* CryptoManager.swift */,
+				C591B9B12AE23C7A00A50131 /* Errors.swift */,
+				C591B9B32AE23C7A00A50131 /* PairingManager.swift */,
+				C591B9B72AE23C7A00A50131 /* RemoteManager.swift */,
+				C591B9B52AE23C7A00A50131 /* Result.swift */,
+				C591B9B22AE23C7A00A50131 /* TLSManager.swift */,
+			);
+			name = AndroidTVRemoteControl;
+			sourceTree = "<group>";
+		};
+		C591B9BF2AE23C8D00A50131 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C591B9CD2AE23CC100A50131 /* CommandNetwork */,
+				C591B9C22AE23CA700A50131 /* PairingNetwork */,
+				C591B9C02AE23CA300A50131 /* RequestDataProtocol.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		C591B9C22AE23CA700A50131 /* PairingNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				C591B9C32AE23CBE00A50131 /* Configuration.swift */,
+				C591B9C42AE23CBE00A50131 /* Option.swift */,
+				C591B9C52AE23CBE00A50131 /* Pairing.swift */,
+				C591B9C62AE23CBE00A50131 /* PairingNetwork.swift */,
+				C591B9C72AE23CBE00A50131 /* Secret.swift */,
+			);
+			name = PairingNetwork;
+			sourceTree = "<group>";
+		};
+		C591B9CD2AE23CC100A50131 /* CommandNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				C591B9D22AE23CD600A50131 /* AndroidTVConfigurationMessage.swift */,
+				C591B9CE2AE23CD600A50131 /* CommandNetwork.swift */,
+				C591B9CF2AE23CD600A50131 /* Ping.swift */,
+				C591B9D02AE23CD600A50131 /* SecodConfiguration.swift */,
+				C591B9D12AE23CD600A50131 /* SecondConfigurationResponse.swift */,
+			);
+			name = CommandNetwork;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C591B9672AE1CEED00A50131 /* Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C591B97C2AE1CEEE00A50131 /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildPhases = (
+				C591B9642AE1CEED00A50131 /* Sources */,
+				C591B9652AE1CEED00A50131 /* Frameworks */,
+				C591B9662AE1CEED00A50131 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Demo;
+			productName = Demo;
+			productReference = C591B9682AE1CEED00A50131 /* Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C591B9602AE1CEED00A50131 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					C591B9672AE1CEED00A50131 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = C591B9632AE1CEED00A50131 /* Build configuration list for PBXProject "Demo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C591B95F2AE1CEED00A50131;
+			productRefGroup = C591B9692AE1CEED00A50131 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C591B9672AE1CEED00A50131 /* Demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C591B9662AE1CEED00A50131 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C591B9DA2AE23E7F00A50131 /* cert.der in Resources */,
+				C591B9752AE1CEEE00A50131 /* Assets.xcassets in Resources */,
+				C591B9DB2AE23E7F00A50131 /* cert.p12 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C591B9642AE1CEED00A50131 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C591B9D62AE23CD600A50131 /* SecondConfigurationResponse.swift in Sources */,
+				C591B9BC2AE23C7A00A50131 /* Result.swift in Sources */,
+				C591B9702AE1CEED00A50131 /* ViewController.swift in Sources */,
+				C591B9C92AE23CBE00A50131 /* Option.swift in Sources */,
+				C5D3739F2AE2EE4500BE7F37 /* Views.swift in Sources */,
+				C591B9CB2AE23CBE00A50131 /* PairingNetwork.swift in Sources */,
+				C591B9BE2AE23C7A00A50131 /* RemoteManager.swift in Sources */,
+				C591B9B92AE23C7A00A50131 /* TLSManager.swift in Sources */,
+				C591B9D32AE23CD600A50131 /* CommandNetwork.swift in Sources */,
+				C591B9CA2AE23CBE00A50131 /* Pairing.swift in Sources */,
+				C591B9D42AE23CD600A50131 /* Ping.swift in Sources */,
+				C591B9BB2AE23C7A00A50131 /* CryptoManager.swift in Sources */,
+				C591B9C12AE23CA300A50131 /* RequestDataProtocol.swift in Sources */,
+				C591B9B82AE23C7A00A50131 /* Errors.swift in Sources */,
+				C591B9CC2AE23CBE00A50131 /* Secret.swift in Sources */,
+				C591B9D52AE23CD600A50131 /* SecodConfiguration.swift in Sources */,
+				C591B9C82AE23CBE00A50131 /* Configuration.swift in Sources */,
+				C591B9D72AE23CD600A50131 /* AndroidTVConfigurationMessage.swift in Sources */,
+				C591B9BD2AE23C7A00A50131 /* CertManager.swift in Sources */,
+				C591B9BA2AE23C7A00A50131 /* PairingManager.swift in Sources */,
+				C591B9802AE2356800A50131 /* RemoteTVManager.swift in Sources */,
+				C591B96C2AE1CEED00A50131 /* AppDelegate.swift in Sources */,
+				C591B96E2AE1CEED00A50131 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C591B97A2AE1CEEE00A50131 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C591B97B2AE1CEEE00A50131 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C591B97D2AE1CEEE00A50131 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Demo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AndroidTVRemoteControl.Demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C591B97E2AE1CEEE00A50131 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Demo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AndroidTVRemoteControl.Demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C591B9632AE1CEED00A50131 /* Build configuration list for PBXProject "Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C591B97A2AE1CEEE00A50131 /* Debug */,
+				C591B97B2AE1CEEE00A50131 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C591B97C2AE1CEEE00A50131 /* Build configuration list for PBXNativeTarget "Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C591B97D2AE1CEEE00A50131 /* Debug */,
+				C591B97E2AE1CEEE00A50131 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C591B9602AE1CEED00A50131 /* Project object */;
+}
