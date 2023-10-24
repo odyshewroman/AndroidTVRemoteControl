@@ -51,35 +51,20 @@ class RemoteTVManager {
     
     func connect(host: String) {
         queue.async {
-            self.pairingManager.stateChanged = { [weak self] state in
-                self?.pairingStateChanged?(state.toString())
+            self.remoteManager.stateChanged = { [weak self] remoteState in
+                self?.remoteStateChanged?(remoteState.toString())
+                
+                if case .error(.connectionWaitingError) = remoteState {
+                    self?.pairingManager.stateChanged = { pairingState in
+                        self?.pairingStateChanged?(pairingState.toString())
 
-                switch state {
-                case .waitingCode:
-                    // send code from Android TV device
-                    return
-                case .successPaired:
-                    self?.remoteStateChanged?(state.toString())
-                    self?.remoteManager.stateChanged = { state in
-                        switch state {
-                        case .connected:
-                            return
-                        default:
-                            return
+                        if case .successPaired = pairingState {
+                            self?.remoteManager.connect(host)
                         }
                     }
-
-                    self?.remoteManager.connect(host)
-                    return
-                default:
-                    return
+                    
+                    self?.pairingManager.connect(host, "client", "iPhone")
                 }
-            }
-
-            self.pairingManager.connect(host, "client", "iPhone")
-            
-            self.remoteManager.stateChanged = { state in
-                self.remoteStateChanged?(state.toString())
             }
             
             self.remoteManager.connect(host)
