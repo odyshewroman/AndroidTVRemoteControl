@@ -154,7 +154,11 @@ extension CommandNetwork {
         var data: Data
         
         var isSuccess: Bool {
-            return data.starts(with: [0x02, 0x12, 0x0])
+            guard data.count >= 3 else {
+                return false
+            }
+
+            return Array(data.suffix(3)) == [0x02, 0x12, 0x0]
         }
     }
 }
