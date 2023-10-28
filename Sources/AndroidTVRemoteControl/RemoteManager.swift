@@ -155,10 +155,10 @@ public class RemoteManager {
             
             data.removeAll()
             send(CommandNetwork.SecondConfigurationRequest())
-            remoteState = .secondCofigSent
+            remoteState = .secondConfigSent
             receive()
             
-        case .secondCofigSent:
+        case .secondConfigSent:
             guard secondConfigurationResponse.parse(data) else {
                 receive()
                 return
@@ -197,7 +197,7 @@ extension RemoteManager {
         case connected
         case fisrtConfigMessageReceived(CommandNetwork.DeviceInfo)
         case firstConfigSent
-        case secondCofigSent
+        case secondConfigSent
         case paired(runningApp: String?)
         case error(AndroidTVRemoteControlError)
     }

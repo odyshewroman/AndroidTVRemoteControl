@@ -118,8 +118,8 @@ extension RemoteManager.RemoteState {
             return "fisrt Config Message Received: vendor: \(info.vendor) model: \(info.model)"
         case .firstConfigSent:
             return "first Config Sent"
-        case .secondCofigSent:
-            return "second Cofig Sent"
+        case .secondConfigSent:
+            return "second Config Sent"
         case .paired(let runningApp):
             return "Paired! Current runned app " + (runningApp ?? "")
         case .error(let error):
@@ -161,7 +161,6 @@ extension PairingManager.PairingState {
             return "Success Paired"
         case .error(let error):
             return "Error: " + error.toString()
-            
         }
     }
 }
