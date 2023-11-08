@@ -40,11 +40,21 @@ class ViewController: UIViewController {
         views.connectButton.addTarget(self, action: #selector(connect), for: .touchUpInside)
         views.sendCodeButton.addTarget(self, action: #selector(sendCode), for: .touchUpInside)
         views.runNetflixButton.addTarget(self, action: #selector(runNetflix), for: .touchUpInside)
+        views.volUpButton.addTarget(self, action: #selector(volUp), for: .touchUpInside)
+        views.volDownButton.addTarget(self, action: #selector(volDown), for: .touchUpInside)
     }
     
     @objc private func connect() {
         // set your Android TV device ip
         remoteManager.connect(host: "")
+    }
+    
+    @objc private func volUp() {
+        remoteManager.volUp()
+    }
+    
+    @objc private func volDown() {
+        remoteManager.volDown()
     }
     
     @objc private func sendCode() {

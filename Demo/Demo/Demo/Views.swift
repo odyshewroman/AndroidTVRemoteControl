@@ -15,6 +15,9 @@ extension ViewController {
         let sendCodeButton = UIButton()
         let runNetflixButton = UIButton()
         
+        let volUpButton = UIButton()
+        let volDownButton = UIButton()
+        
         let pairingStateLabel = UILabel()
         let remoteStateLabel = UILabel()
         
@@ -27,6 +30,8 @@ extension ViewController {
             view.addSubview(codeTextField)
             view.addSubview(sendCodeButton)
             view.addSubview(runNetflixButton)
+            view.addSubview(volUpButton)
+            view.addSubview(volDownButton)
             
             pairingStateLabel.numberOfLines = 0
             remoteStateLabel.numberOfLines = 0
@@ -37,6 +42,8 @@ extension ViewController {
             codeTextField.translatesAutoresizingMaskIntoConstraints = false
             sendCodeButton.translatesAutoresizingMaskIntoConstraints = false
             runNetflixButton.translatesAutoresizingMaskIntoConstraints = false
+            volUpButton.translatesAutoresizingMaskIntoConstraints = false
+            volDownButton.translatesAutoresizingMaskIntoConstraints = false
             
             pairingStateLabel.textAlignment = .center
             remoteStateLabel.textAlignment = .center
@@ -47,6 +54,10 @@ extension ViewController {
             sendCodeButton.layer.cornerRadius = 8
             runNetflixButton.backgroundColor = UIColor.gray.withAlphaComponent(0.7)
             runNetflixButton.layer.cornerRadius = 8
+            volUpButton.backgroundColor = UIColor.gray.withAlphaComponent(0.7)
+            volUpButton.layer.cornerRadius = 8
+            volDownButton.backgroundColor = UIColor.gray.withAlphaComponent(0.7)
+            volDownButton.layer.cornerRadius = 8
             
             codeTextField.layer.borderWidth = 2.0
             codeTextField.layer.borderColor = UIColor.darkGray.cgColor
@@ -81,6 +92,16 @@ extension ViewController {
                 runNetflixButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
                 runNetflixButton.heightAnchor.constraint(equalToConstant: 40),
                 runNetflixButton.widthAnchor.constraint(equalToConstant: 120),
+                
+                volUpButton.centerYAnchor.constraint(equalTo: runNetflixButton.centerYAnchor),
+                volUpButton.leftAnchor.constraint(equalTo: runNetflixButton.rightAnchor, constant: 15),
+                volUpButton.heightAnchor.constraint(equalToConstant: 40),
+                volUpButton.widthAnchor.constraint(equalToConstant: 80),
+                
+                volDownButton.centerYAnchor.constraint(equalTo: runNetflixButton.centerYAnchor),
+                volDownButton.rightAnchor.constraint(equalTo: runNetflixButton.leftAnchor, constant: -15),
+                volDownButton.heightAnchor.constraint(equalToConstant: 40),
+                volDownButton.widthAnchor.constraint(equalToConstant: 80),
             ])
             
             connectButton.setTitle("Connect", for: .normal)
@@ -90,6 +111,9 @@ extension ViewController {
             sendCodeButton.setTitleColor(.gray, for: .disabled)
             sendCodeButton.setTitleColor(.white, for: .normal)
             runNetflixButton.setTitle("Run Netflix", for: .normal)
+            volUpButton.setTitle("Vol +", for: .normal)
+            volDownButton.setTitle("Vol -", for: .normal)
+            
             
             pairingStateLabel.text = "pairingStateLabel"
             remoteStateLabel.text = "remoteStateLabel"
