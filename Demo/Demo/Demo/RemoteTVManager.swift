@@ -79,28 +79,25 @@ class RemoteTVManager {
     
     func runNetflix() {
         queue.async {
-            self.remoteManager.send(NetflixApp())
+            self.remoteManager.send(DeepLink("https://www.netflix.com/title"))
+        }
+    }
+    
+    func volUp() {
+        queue.async {
+            self.remoteManager.send(KeyPress(.KEYCODE_VOLUME_UP))
+        }
+    }
+    
+    func volDown() {
+        queue.async {
+            self.remoteManager.send(KeyPress(.KEYCODE_VOLUME_DOWN))
         }
     }
 }
 
 public enum MyError: Error {
     case certNotFound
-}
-
-struct NetflixApp: RequestDataProtocol {
-    let url = "https://www.netflix.com/title"
-    
-    var length: UInt8 {
-        return UInt8(data.count)
-    }
-    
-    var data: Data {
-        var data = Data([0xd2, 0x05, UInt8(2 + url.count), 0xa, UInt8(url.count)])
-        data.append(contentsOf: url.utf8)
-        
-        return data
-    }
 }
 
 extension RemoteManager.RemoteState {
