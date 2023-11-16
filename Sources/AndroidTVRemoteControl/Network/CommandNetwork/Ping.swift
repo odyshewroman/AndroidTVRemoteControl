@@ -19,8 +19,17 @@ extension CommandNetwork {
         
         init?(_ data: [UInt8]) {
             guard data.indices.contains(1), data[1] == 66,
-                  data.indices.contains(3), data[3] == 8,
-                  let index = data.suffix(from: 3).firstIndex(of: 16) else {
+                  data.indices.contains(3), data[3] == 8 else {
+                return nil
+            }
+            
+            if data[2] == 0x02 {
+                val1 = Array(data.suffix(from: 4))
+                val2 = []
+                return
+            }
+            
+            guard let index = data.suffix(from: 3).firstIndex(of: 16) else {
                 return nil
             }
             

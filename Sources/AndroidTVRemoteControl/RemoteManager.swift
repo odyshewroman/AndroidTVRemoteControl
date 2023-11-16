@@ -128,6 +128,7 @@ public class RemoteManager {
     
     private func handleData() {
         if handlePing() {
+            receive()
             return
         }
         
@@ -173,6 +174,7 @@ public class RemoteManager {
             remoteState = .paired(runningApp: secondConfigurationResponse.runAppName)
             receive()
         default:
+            receive()
             return
         }
     }
@@ -182,10 +184,9 @@ public class RemoteManager {
             return false
         }
         
+        data.removeAll()
         let pong = CommandNetwork.Pong(ping.val1)
         send(pong.data)
-        data.removeAll()
-        receive()
         return true
     }
 }
