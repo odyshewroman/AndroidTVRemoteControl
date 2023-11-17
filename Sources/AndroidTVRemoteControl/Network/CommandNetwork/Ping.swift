@@ -18,28 +18,28 @@ extension CommandNetwork {
         }
         
         init?(_ data: [UInt8]) {
-            guard data.indices.contains(1), data[1] == 66,
+            guard !data.isEmpty,
+                  data[0] == data.count - 1,
+                  data.indices.contains(1), data[1] == 66,
+                  data.indices.contains(2), data[2] == data[0] - 2,
                   data.indices.contains(3), data[3] == 8 else {
                 return nil
             }
             
+            let startIndex = 4
             if data[2] == 0x02 {
-                val1 = Array(data.suffix(from: 4))
+                val1 = Array(data.suffix(from: startIndex))
                 val2 = []
                 return
             }
             
-            guard let index = data.suffix(from: 3).firstIndex(of: 16) else {
+            let endIndex = startIndex + Int(data[2] - 8)
+            guard endIndex > 3, data.count > endIndex else {
                 return nil
             }
             
-            val1 = Array(data[4..<index])
-            
-            guard data.count > index + 1 else {
-                return nil
-            }
-            
-            val2 = Array(data.suffix(from: index + 1))
+            val1 = Array(data[startIndex...(endIndex)])
+            val2 = endIndex + 1 < data.count ? Array(data.suffix(from: endIndex + 1)) : []
         }
     }
 }
@@ -53,7 +53,7 @@ extension CommandNetwork {
         let data: Data
         
         init(_ value: [UInt8]) {
-            var data: [UInt8] = [74, 2, 8]
+            var data: [UInt8] = [74, UInt8(value.count + 1), 8]
             data.append(contentsOf: value)
             data.insert(UInt8(data.count), at: 0)
             self.data = Data(data)
