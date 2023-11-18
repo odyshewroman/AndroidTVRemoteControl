@@ -33,13 +33,16 @@ extension CommandNetwork {
                 return
             }
             
-            let endIndex = startIndex + Int(data[2] - 8)
+            guard let endIndex = data.lastIndex(of: 16) else {
+                return nil
+            }
+            
             guard endIndex > 3, data.count > endIndex else {
                 return nil
             }
             
-            val1 = Array(data[startIndex...(endIndex)])
-            val2 = endIndex + 1 < data.count ? Array(data.suffix(from: endIndex + 1)) : []
+            val1 = Array(data[startIndex..<endIndex])
+            val2 = endIndex + 1 < data.count ? Array(data.suffix(from: endIndex)) : []
         }
     }
 }
