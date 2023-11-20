@@ -44,6 +44,34 @@ extension CommandNetwork {
             val1 = Array(data[startIndex..<endIndex])
             val2 = endIndex + 1 < data.count ? Array(data.suffix(from: endIndex)) : []
         }
+        
+        static func extract(from data: Data) -> Ping? {
+            return self.extract(from: Array(data))
+        }
+        
+        static func extract(from bytes: [UInt8]) -> Ping? {
+            let indexes = bytes.indices.filter { bytes[$0] == 66 }
+            
+            guard indexes.count > 0 else {
+                return nil
+            }
+            
+            for i in indexes {
+                if i == 0 { continue }
+                
+                let size = Int(bytes[i-1])
+                if i + size > bytes.count {
+                    continue
+                }
+                
+                
+                if let ping = Ping(Array(bytes[i-1..<i+size])) {
+                    return ping
+                }
+            }
+            
+            return nil
+        }
     }
 }
 

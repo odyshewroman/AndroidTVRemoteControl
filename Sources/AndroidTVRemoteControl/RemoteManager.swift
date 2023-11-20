@@ -174,7 +174,7 @@ public class RemoteManager {
             remoteState = .paired(runningApp: secondConfigurationResponse.runAppName)
             receive()
         default:
-            if let volumeLevel = VolumeLevel(data) {
+            if VolumeLevel(data) != nil {
                 data.removeAll()
             }
             receive()
@@ -183,7 +183,7 @@ public class RemoteManager {
     }
     
     private func handlePing() -> Bool {
-        guard let ping = CommandNetwork.Ping(data) else {
+        guard let ping = CommandNetwork.Ping.extract(from: data) else {
             return false
         }
         
