@@ -174,6 +174,9 @@ public class RemoteManager {
             remoteState = .paired(runningApp: secondConfigurationResponse.runAppName)
             receive()
         default:
+            if let volumeLevel = VolumeLevel(data) {
+                data.removeAll()
+            }
             receive()
             return
         }

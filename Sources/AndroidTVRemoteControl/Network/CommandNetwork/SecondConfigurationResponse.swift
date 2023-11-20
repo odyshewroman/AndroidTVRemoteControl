@@ -41,7 +41,7 @@ struct SecondConfigurationResponse {
         }
         
         if !volumeLevelPart {
-            volumeLevelPart = parseVolumeLevel(data)
+            volumeLevelPart = VolumeLevel(data) != nil
             result = result || volumeLevelPart
         }
         
@@ -95,54 +95,5 @@ struct SecondConfigurationResponse {
         index += 1
         let appNameArray = data[index..<index + appNameLength]
         return String(data: Data(appNameArray), encoding: .utf8)
-    }
-    
-    // incoming data format: [data_length, 146, 3, sub_length, 8, <unknown>, <unknown>(optional), 16, <sub_length|unknown>, 26, model_name_length, model_name_string, 32, <unknown|0/1/2>]
-    // For example: [18, 146, 3, 15, 8, 9, 16, 10, 26, 7, 84, 80, 77, 49, 55, 49, 69, 32, 1]
-    private func parseVolumeLevel(_ data: [UInt8]) -> Bool {
-        guard var index = data.firstIndex(of: 146), index > 0 else {
-            return false
-        }
-        
-        let length = Int(data[index - 1])
-        
-        guard length >= 12,
-              data.count >= index + length
-        else {
-            return false
-        }
-        
-        index += 1
-        guard data.indices.contains(index), data[index] == 3,
-              data.indices.contains(index + 2), data[index + 2] == 8 else {
-            return false
-        }
-        
-        index += 4
-        if !data.indices.contains(index) || data[index] != 16 {
-            index += 1
-        }
-        
-        guard data.indices.contains(index), data[index] == 16 else {
-            return false
-        }
-        
-        let modelNameSizeIndex = index + 3
-        
-        guard data.indices.contains(modelNameSizeIndex),
-              Int(data[modelNameSizeIndex]) == modelName.count,
-              let modelNameData = modelName.data(using: .utf8)else {
-            return false
-        }
-        
-        // Check model name in necessary response index
-        let modelNameArray = Array(modelNameData)
-        let responseModelNameArray = Array(data[modelNameSizeIndex + 1...modelNameSizeIndex + modelName.count])
-        guard modelNameArray == responseModelNameArray else {
-            return false
-        }
-        
-        index = modelNameSizeIndex + modelName.count + 1
-        return data.indices.contains(index) && data[index] == 32
     }
 }
