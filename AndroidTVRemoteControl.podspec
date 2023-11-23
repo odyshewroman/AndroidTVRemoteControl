@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AndroidTVRemoteControl'
-  s.version          = '1.2.4'
+  s.version          = '1.2.5'
   s.summary          = 'Implementation of the remote control protocol v2 for Android TV.'
   s.homepage         = 'https://github.com/odyshewroman/AndroidTVRemoteControl'
   s.license          = { :type => 'MIT', :file => 'LICENSE.md' }
