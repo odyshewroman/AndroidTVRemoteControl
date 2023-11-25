@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  Encoder.swift
 //  
 //
 //  Created by Roman Odyshew on 07.11.2023.
