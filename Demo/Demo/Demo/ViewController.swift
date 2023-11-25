@@ -46,15 +46,17 @@ class ViewController: UIViewController {
     
     @objc private func connect() {
         // set your Android TV device ip
-        remoteManager.connect(host: "")
+        remoteManager.connect(host: "192.168.3.22")
     }
     
     @objc private func volUp() {
         remoteManager.volUp()
+        print("volUp")
     }
     
     @objc private func volDown() {
         remoteManager.volDown()
+        print("voldown")
     }
     
     @objc private func sendCode() {

@@ -37,11 +37,17 @@ class RemoteTVManager {
         
         tlsManager.secTrustClosure = { secTrust in
             cryptoManager.serverPublicCertificate = {
-                guard let publicKey = SecTrustCopyKey(secTrust) else {
-                    return .Error(.secTrustCopyKeyError)
+                if #available(iOS 14.0, *) {
+                    guard let key = SecTrustCopyKey(secTrust) else {
+                        return .Error(.secTrustCopyKeyError)
+                    }
+                    return .Result(key)
+                } else {
+                    guard let key = SecTrustCopyPublicKey(secTrust) else {
+                        return .Error(.secTrustCopyKeyError)
+                    }
+                    return .Result(key)
                 }
-                
-                return .Result(publicKey)
             }
         }
         
