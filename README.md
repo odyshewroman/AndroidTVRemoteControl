@@ -10,7 +10,7 @@ This project it's implementation pairing and connection to Android TV OS devices
 
 ## Compatibility
 
-The AndroidTVRemoteControl is supported on iOS version 14 or later and Swift 4 and above.
+The AndroidTVRemoteControl is supported on iOS version 13 or later and Swift 4 and above.
 
 ## Installation
 
