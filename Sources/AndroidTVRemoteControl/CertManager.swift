@@ -45,10 +45,16 @@ class CertManager {
             return (.Error(.createTrustObjectError))
         }
         
-        guard let key = SecTrustCopyKey(secTrust) else {
-            return .Error(.secTrustCopyKeyError)
+        if #available(iOS 14.0, *) {
+            guard let key = SecTrustCopyKey(secTrust) else {
+                return .Error(.secTrustCopyKeyError)
+            }
+            return .Result(key)
+        } else {
+            guard let key = SecTrustCopyPublicKey(secTrust) else {
+                return .Error(.secTrustCopyKeyError)
+            }
+            return .Result(key)
         }
-        
-        return .Result(key)
     }
 }
