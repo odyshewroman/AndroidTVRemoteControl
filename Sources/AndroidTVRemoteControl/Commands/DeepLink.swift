@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DeepLink {
+public struct DeepLink {
     let url: String
     
     init(_ url: String) {
@@ -20,7 +20,7 @@ struct DeepLink {
 }
 
 extension DeepLink: RequestDataProtocol {
-    var data: Data {
+    public var data: Data {
         var data = Data([0xd2, 0x05, UInt8(2 + url.count), 0xa, UInt8(url.count)])
         data.append(contentsOf: url.utf8)
         return data

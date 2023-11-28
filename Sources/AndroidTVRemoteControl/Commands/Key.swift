@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Key: UInt {
+public enum Key: UInt {
     // [82, 5, 8, 132, 2, 16, 3]
     // [82, 4, 8, 66, 16, 3]
     // [0x52, 0x04, 0x08, code, 0x10, 0x03]
