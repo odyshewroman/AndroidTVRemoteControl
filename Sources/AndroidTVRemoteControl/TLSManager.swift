@@ -1,6 +1,6 @@
 //
 //  TLSManager.swift
-//  
+//
 //
 //  Created by Roman Odyshew on 15.10.2023.
 //
@@ -18,7 +18,7 @@ public class TLSManager {
     
     func getNWParams(_ queue: DispatchQueue) -> Result<NWParameters> {
         var rawItems: CFArray?
-
+        
         switch certificateProvider() {
         case .Result(let items):
             rawItems = items
@@ -32,10 +32,10 @@ public class TLSManager {
         
         // Extract the CFTypeRef representing the SecIdentity and check that cfIdentity type is SecIdentityGetTypeID, cause we should use force unwrap
         guard let cfIdentity = items.first?[kSecImportItemIdentity as String] as? CFTypeRef,
-            CFGetTypeID(cfIdentity) == SecIdentityGetTypeID() else {
+              CFGetTypeID(cfIdentity) == SecIdentityGetTypeID() else {
             return .Error(.extractCFTypeRefError)
         }
-
+        
         let clientIdentity = cfIdentity as! SecIdentity
         
         guard let secIdentity: sec_identity_t = sec_identity_create(clientIdentity) else {
@@ -46,18 +46,21 @@ public class TLSManager {
         
         sec_protocol_options_set_verify_block(options.securityProtocolOptions, { [weak self] (_, sec_trust, completionHandler) in
             let serverTrust = sec_trust_copy_ref(sec_trust).takeRetainedValue()
-
+            
             self?.secTrustClosure?(serverTrust)
             
             // not check and accept all certificates
             completionHandler(true)
         }, queue)
         
-
+        
         sec_protocol_options_set_challenge_block(options.securityProtocolOptions, { (_, completionHandler) in
             completionHandler(secIdentity)
         }, queue)
         
-        return .Result(NWParameters(tls: options))
+        let tcpOptions = NWProtocolTCP.Options()
+        tcpOptions.connectionTimeout = 3
+        
+        return .Result(NWParameters(tls: options, tcp: tcpOptions))
     }
 }
