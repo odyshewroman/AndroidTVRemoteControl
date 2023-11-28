@@ -8,7 +8,7 @@
 import Foundation
 
 public class CertManager {
-    func cert(_ url: URL, _ password: String) -> Result<CFArray?> {
+    public func cert(_ url: URL, _ password: String) -> Result<CFArray?> {
         let p12Data: Data
         do {
             p12Data = try Data(contentsOf: url)
@@ -27,7 +27,7 @@ public class CertManager {
         return .Result(rawItems)
     }
     
-    func getSecKey(_ url: URL) -> Result<SecKey> {
+    public func getSecKey(_ url: URL) -> Result<SecKey> {
         guard let certificateData = NSData(contentsOf:url),
               let certificate = SecCertificateCreateWithData(nil, certificateData) else {
             return .Error(.createCertFromDataError)
