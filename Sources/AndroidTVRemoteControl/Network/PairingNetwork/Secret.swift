@@ -15,10 +15,6 @@ extension PairingNetwork {
         
         private let unknownFields: [UInt8] = [0xc2, 0x02]
         
-        var length: UInt8 {
-            return UInt8(data.count)
-        }
-        
         var data: Data {
             var data = Data()
             

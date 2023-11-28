@@ -44,10 +44,6 @@ extension PairingNetwork {
             data.append(contentsOf: array)
             return data
         }
-        
-        var length: UInt8 {
-            return UInt8(data.count)
-        }
     }
 }
 

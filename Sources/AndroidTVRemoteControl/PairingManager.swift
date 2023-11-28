@@ -212,7 +212,7 @@ public class PairingManager {
     }
     
     private func send(_ request: RequestDataProtocol) {
-        send(Data([request.length]), request.data)
+        send(Data(Encoder.encodeVarint(UInt(request.data.count))), request.data)
     }
     
     private func send(_ data: Data, _ nextData: Data? = nil) {

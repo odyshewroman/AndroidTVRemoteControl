@@ -24,10 +24,6 @@ extension PairingNetwork {
             return data
         }
         
-        var length: UInt8 {
-            return UInt8(data.count)
-        }
-        
         init() {
             status = .ok
             option = ParingOption(inputEncodings: [ParingEncoding(symbolLength: 6, type: .hexadecimal)],

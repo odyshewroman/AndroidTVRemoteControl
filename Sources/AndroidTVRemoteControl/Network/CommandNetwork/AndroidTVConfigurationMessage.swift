@@ -36,28 +36,37 @@ extension CommandNetwork {
         let deviceInfo: DeviceInfo
         
         var data: Data {
-            var data = Data()
+            var data = Data([0xa])
+ 
+            let modelLength = Encoder.encodeVarint(UInt(deviceInfo.model.count))
+            let vendorLength = Encoder.encodeVarint(UInt(deviceInfo.vendor.count))
+            let buildLength = Encoder.encodeVarint(UInt(deviceInfo.appBuild.count))
+            let appNameLength = Encoder.encodeVarint(UInt(deviceInfo.appName.count))
+            let versionLength = Encoder.encodeVarint(UInt(deviceInfo.version.count))
             
-            let length = UInt8(17 + deviceInfo.length)
+            let subLength = 7 + deviceInfo.length + modelLength.count + vendorLength.count + buildLength.count + appNameLength.count + versionLength.count
+            let length = subLength + 4 + Encoder.encodeVarint(UInt(subLength)).count
+
+            data.append(contentsOf: Encoder.encodeVarint(UInt(length)))
+            data.append(contentsOf: [0x08, 0xEE, 0x04, 0x12])
             
-            data.append(contentsOf: [0xa, length, 0x08, 0xEE, 0x04, 0x12, length - 5, 0xa])
-            data.append(contentsOf: [UInt8(deviceInfo.model.count)])
+            data.append(contentsOf: Encoder.encodeVarint(UInt(subLength)))
+            data.append(contentsOf: [0xa])
+            data.append(contentsOf: modelLength)
             data.append(contentsOf: deviceInfo.model.utf8)
-            data.append(contentsOf: [0x12, UInt8(deviceInfo.vendor.count)])
+            data.append(contentsOf: [0x12])
+            data.append(contentsOf: vendorLength)
             data.append(contentsOf: deviceInfo.vendor.utf8)
-            data.append(contentsOf: [0x18, 0x01, 0x22, UInt8(deviceInfo.appBuild.count)])
+            data.append(contentsOf: [0x18, 0x01, 0x22])
+            data.append(contentsOf: buildLength)
             data.append(contentsOf: deviceInfo.appBuild.utf8)
-            data.append(contentsOf: [0x2a, UInt8(deviceInfo.appName.count)])
+            data.append(contentsOf: [0x2a])
+            data.append(contentsOf: appNameLength)
             data.append(contentsOf: deviceInfo.appName.utf8)
             data.append(contentsOf: [0x32])
-            data.append(contentsOf: [UInt8(deviceInfo.version.count)])
+            data.append(contentsOf: versionLength)
             data.append(contentsOf: deviceInfo.version.utf8)
-            
             return data
-        }
-        
-        var length: UInt8 {
-            return UInt8(data.count)
         }
     }
 

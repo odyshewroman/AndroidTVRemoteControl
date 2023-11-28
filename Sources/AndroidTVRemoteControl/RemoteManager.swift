@@ -63,7 +63,7 @@ public class RemoteManager {
     }
     
     public func send(_ request: RequestDataProtocol) {
-        send(Data([request.length]), request.data)
+        send(Data(Encoder.encodeVarint(UInt(request.data.count))), request.data)
     }
     
     public func send(_ data: Data, _ nextData: Data? = nil) {

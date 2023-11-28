@@ -27,8 +27,4 @@ extension KeyPress: RequestDataProtocol {
         
         return data
     }
-    
-    var length: UInt8 {
-        return UInt8(data.count)
-    }
 }

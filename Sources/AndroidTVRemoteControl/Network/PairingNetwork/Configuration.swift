@@ -43,10 +43,6 @@ extension PairingNetwork {
             
             return data
         }
-        
-        var length: UInt8 {
-            return UInt8(data.count)
-        }
     }
     
     struct ParingConfiguration {

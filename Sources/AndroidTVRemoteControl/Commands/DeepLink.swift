@@ -25,8 +25,4 @@ extension DeepLink: RequestDataProtocol {
         data.append(contentsOf: url.utf8)
         return data
     }
-    
-    var length: UInt8 {
-        return UInt8(data.count)
-    }
 }

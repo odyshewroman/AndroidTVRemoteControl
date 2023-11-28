@@ -77,10 +77,6 @@ extension CommandNetwork {
 
 extension CommandNetwork {
     struct Pong: RequestDataProtocol {
-        var length: UInt8 {
-            return UInt8(data.count)
-        }
-        
         let data: Data
         
         init(_ value: [UInt8]) {

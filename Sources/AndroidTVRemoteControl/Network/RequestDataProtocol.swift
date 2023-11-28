@@ -9,5 +9,4 @@ import Foundation
 
 public protocol RequestDataProtocol {
     var data: Data { get }
-    var length: UInt8 { get }
 }
