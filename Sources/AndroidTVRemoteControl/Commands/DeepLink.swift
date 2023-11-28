@@ -10,11 +10,11 @@ import Foundation
 public struct DeepLink {
     let url: String
     
-    init(_ url: String) {
+    public init(_ url: String) {
         self.url = url
     }
     
-    init(_ url: URL) {
+    public init(_ url: URL) {
         self.url = url.absoluteString
     }
 }
