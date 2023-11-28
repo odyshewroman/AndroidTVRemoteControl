@@ -8,6 +8,8 @@
 import Foundation
 
 public class CertManager {
+    public init() {}
+    
     public func cert(_ url: URL, _ password: String) -> Result<CFArray?> {
         let p12Data: Data
         do {
