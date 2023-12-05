@@ -11,9 +11,6 @@ enum Key: UInt {
     // [82, 5, 8, 132, 2, 16, 3]
     // [82, 4, 8, 66, 16, 3]
     // [0x52, 0x04, 0x08, code, 0x10, 0x03]
-    
-    
-    // 260 - 132 i 2
         
       case KEYCODE_UNKNOWN                          = 0
       case KEYCODE_SOFT_LEFT                        = 1
@@ -321,4 +318,3 @@ enum Key: UInt {
       case KEYCODE_DEMO_APP_3                       = 303
       case KEYCODE_DEMO_APP_4                       = 304
 }
-
