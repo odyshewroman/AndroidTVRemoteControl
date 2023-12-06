@@ -51,8 +51,8 @@ class RemoteTVManager {
             }
         }
         
-        pairingManager = PairingManager(tlsManager, cryptoManager)
-        remoteManager = RemoteManager(tlsManager, CommandNetwork.DeviceInfo("client", "iPhone", "1.0.0", "example_app", "235"))
+        pairingManager = PairingManager(tlsManager, cryptoManager, DefaultLogger())
+        remoteManager = RemoteManager(tlsManager, CommandNetwork.DeviceInfo("client", "iPhone", "1.0.0", "example_app", "235"), DefaultLogger())
     }
     
     func connect(host: String) {

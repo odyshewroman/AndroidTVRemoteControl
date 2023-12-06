@@ -16,7 +16,6 @@
 		C591B9B92AE23C7A00A50131 /* TLSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9B22AE23C7A00A50131 /* TLSManager.swift */; };
 		C591B9BA2AE23C7A00A50131 /* PairingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9B32AE23C7A00A50131 /* PairingManager.swift */; };
 		C591B9BB2AE23C7A00A50131 /* CryptoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9B42AE23C7A00A50131 /* CryptoManager.swift */; };
-		C591B9BC2AE23C7A00A50131 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9B52AE23C7A00A50131 /* Result.swift */; };
 		C591B9BD2AE23C7A00A50131 /* CertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9B62AE23C7A00A50131 /* CertManager.swift */; };
 		C591B9BE2AE23C7A00A50131 /* RemoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9B72AE23C7A00A50131 /* RemoteManager.swift */; };
 		C591B9C12AE23CA300A50131 /* RequestDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B9C02AE23CA300A50131 /* RequestDataProtocol.swift */; };
@@ -37,6 +36,8 @@
 		C5B25B4F2AFBCCCC00BE8743 /* DeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B25B4B2AFBCCCC00BE8743 /* DeepLink.swift */; };
 		C5B25B502AFBCCCC00BE8743 /* KeyPress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B25B4C2AFBCCCC00BE8743 /* KeyPress.swift */; };
 		C5D3739F2AE2EE4500BE7F37 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3739E2AE2EE4500BE7F37 /* Views.swift */; };
+		C5E26BD62B2025D4007D7E08 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E26BD42B2025D4007D7E08 /* Result.swift */; };
+		C5E26BD72B2025D4007D7E08 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E26BD52B2025D4007D7E08 /* Logger.swift */; };
 		C5EFFD102B04F20E00B35F8B /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EFFD0F2B04F20E00B35F8B /* Encoder.swift */; };
 		C5EFFD182B0B9B0B00B35F8B /* VolumeLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EFFD172B0B9B0B00B35F8B /* VolumeLevel.swift */; };
 /* End PBXBuildFile section */
@@ -53,7 +54,6 @@
 		C591B9B22AE23C7A00A50131 /* TLSManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TLSManager.swift; path = ../../../Sources/AndroidTVRemoteControl/TLSManager.swift; sourceTree = "<group>"; };
 		C591B9B32AE23C7A00A50131 /* PairingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PairingManager.swift; path = ../../../Sources/AndroidTVRemoteControl/PairingManager.swift; sourceTree = "<group>"; };
 		C591B9B42AE23C7A00A50131 /* CryptoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CryptoManager.swift; path = ../../../Sources/AndroidTVRemoteControl/CryptoManager.swift; sourceTree = "<group>"; };
-		C591B9B52AE23C7A00A50131 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = ../../../Sources/AndroidTVRemoteControl/Result.swift; sourceTree = "<group>"; };
 		C591B9B62AE23C7A00A50131 /* CertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CertManager.swift; path = ../../../Sources/AndroidTVRemoteControl/CertManager.swift; sourceTree = "<group>"; };
 		C591B9B72AE23C7A00A50131 /* RemoteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemoteManager.swift; path = ../../../Sources/AndroidTVRemoteControl/RemoteManager.swift; sourceTree = "<group>"; };
 		C591B9C02AE23CA300A50131 /* RequestDataProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestDataProtocol.swift; path = ../../../Sources/AndroidTVRemoteControl/Network/RequestDataProtocol.swift; sourceTree = "<group>"; };
@@ -74,6 +74,8 @@
 		C5B25B4B2AFBCCCC00BE8743 /* DeepLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeepLink.swift; path = ../../../Sources/AndroidTVRemoteControl/Commands/DeepLink.swift; sourceTree = "<group>"; };
 		C5B25B4C2AFBCCCC00BE8743 /* KeyPress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyPress.swift; path = ../../../Sources/AndroidTVRemoteControl/Commands/KeyPress.swift; sourceTree = "<group>"; };
 		C5D3739E2AE2EE4500BE7F37 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
+		C5E26BD42B2025D4007D7E08 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = ../../../Sources/AndroidTVRemoteControl/misc/Result.swift; sourceTree = "<group>"; };
+		C5E26BD52B2025D4007D7E08 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = ../../../Sources/AndroidTVRemoteControl/misc/Logger.swift; sourceTree = "<group>"; };
 		C5EFFD0F2B04F20E00B35F8B /* Encoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Encoder.swift; path = ../../../Sources/AndroidTVRemoteControl/Encoder.swift; sourceTree = "<group>"; };
 		C5EFFD172B0B9B0B00B35F8B /* VolumeLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VolumeLevel.swift; path = ../../../Sources/AndroidTVRemoteControl/Network/CommandNetwork/VolumeLevel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +127,7 @@
 		C591B9B02AE23C4700A50131 /* AndroidTVRemoteControl */ = {
 			isa = PBXGroup;
 			children = (
+				C5E26BD32B2025B2007D7E08 /* misc */,
 				C5B25B482AFBCCA700BE8743 /* Commands */,
 				C591B9BF2AE23C8D00A50131 /* Network */,
 				C591B9B62AE23C7A00A50131 /* CertManager.swift */,
@@ -132,7 +135,6 @@
 				C591B9B12AE23C7A00A50131 /* Errors.swift */,
 				C591B9B32AE23C7A00A50131 /* PairingManager.swift */,
 				C591B9B72AE23C7A00A50131 /* RemoteManager.swift */,
-				C591B9B52AE23C7A00A50131 /* Result.swift */,
 				C591B9B22AE23C7A00A50131 /* TLSManager.swift */,
 				C5EFFD0F2B04F20E00B35F8B /* Encoder.swift */,
 			);
@@ -183,6 +185,15 @@
 				C5B25B4C2AFBCCCC00BE8743 /* KeyPress.swift */,
 			);
 			name = Commands;
+			sourceTree = "<group>";
+		};
+		C5E26BD32B2025B2007D7E08 /* misc */ = {
+			isa = PBXGroup;
+			children = (
+				C5E26BD52B2025D4007D7E08 /* Logger.swift */,
+				C5E26BD42B2025D4007D7E08 /* Result.swift */,
+			);
+			name = misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,11 +268,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C591B9D62AE23CD600A50131 /* SecondConfigurationResponse.swift in Sources */,
-				C591B9BC2AE23C7A00A50131 /* Result.swift in Sources */,
 				C591B9702AE1CEED00A50131 /* ViewController.swift in Sources */,
 				C5B25B4F2AFBCCCC00BE8743 /* DeepLink.swift in Sources */,
 				C591B9C92AE23CBE00A50131 /* Option.swift in Sources */,
 				C5D3739F2AE2EE4500BE7F37 /* Views.swift in Sources */,
+				C5E26BD72B2025D4007D7E08 /* Logger.swift in Sources */,
 				C591B9CB2AE23CBE00A50131 /* PairingNetwork.swift in Sources */,
 				C591B9BE2AE23C7A00A50131 /* RemoteManager.swift in Sources */,
 				C591B9B92AE23C7A00A50131 /* TLSManager.swift in Sources */,
@@ -281,6 +292,7 @@
 				C591B9D72AE23CD600A50131 /* AndroidTVConfigurationMessage.swift in Sources */,
 				C591B9BD2AE23C7A00A50131 /* CertManager.swift in Sources */,
 				C591B9BA2AE23C7A00A50131 /* PairingManager.swift in Sources */,
+				C5E26BD62B2025D4007D7E08 /* Result.swift in Sources */,
 				C5EFFD182B0B9B0B00B35F8B /* VolumeLevel.swift in Sources */,
 				C591B9802AE2356800A50131 /* RemoteTVManager.swift in Sources */,
 				C591B96C2AE1CEED00A50131 /* AppDelegate.swift in Sources */,
