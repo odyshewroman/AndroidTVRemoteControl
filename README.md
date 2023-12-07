@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![SPM Compatible](https://img.shields.io/badge/SPM-Compatible-brightgreen.svg)](https://swift.org/package-manager)
-[![CocoaPods](https://img.shields.io/cocoapods/v/YourLibraryName.svg)](https://cocoapods.org/pods/AndroidTVRemoteControl)
+[![CocoaPods](https://img.shields.io/cocoapods/v/AndroidTVRemoteControl.svg)](https://cocoapods.org/pods/AndroidTVRemoteControl)
 
 Please suport me [![Support](https://img.shields.io/badge/Support-Buy%20Me%20a%20Coffee-brightgreen.svg)](https://www.buymeacoffee.com/odyshewroman)
 
