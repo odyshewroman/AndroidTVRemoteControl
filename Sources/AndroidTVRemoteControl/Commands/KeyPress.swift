@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct KeyPress {
+public struct KeyPress {
     let key: Key
     let direction: Direction
     
@@ -18,7 +18,7 @@ struct KeyPress {
 }
 
 extension KeyPress: RequestDataProtocol {
-    var data: Data {
+    public var data: Data {
         let encodedKey = Encoder.encodeVarint(key.rawValue)
         var data = Data()
         data.append(contentsOf: [0x52, UInt8(3 + encodedKey.count), 0x08])
