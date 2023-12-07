@@ -11,7 +11,7 @@ public struct KeyPress {
     let key: Key
     let direction: Direction
     
-    init(_ key: Key, _ direction: Direction = .SHORT) {
+    public init(_ key: Key, _ direction: Direction = .SHORT) {
         self.key = key
         self.direction = direction
     }
