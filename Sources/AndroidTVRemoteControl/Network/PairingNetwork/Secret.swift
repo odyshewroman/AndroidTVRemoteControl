@@ -36,7 +36,15 @@ extension PairingNetwork {
         var code: String
         
         var isSuccess: Bool {
-            guard let data = data, data.first == UInt8(data.count - 1) else {
+            guard data != nil else {
+                return false
+            }
+            
+            guard let size = Decoder.decodeVarint(Array(data!)) else {
+                return false
+            }
+            
+            guard let data = data, size.value == UInt(data.count - size.bytesCount) else {
                 return false
             }
             
@@ -45,12 +53,12 @@ extension PairingNetwork {
             }
             
             let subData: [UInt8] = [0xca, 0x02, 0x22, 0x0a]
-            let subCount = data.count - 1 - ProtocolVersion2().size - Status.ok.size - subData.count - 1
+            let subCount = data.count - size.bytesCount - ProtocolVersion2().size - Status.ok.size - subData.count - 1
             if subCount < 0 {
                 return false
             }
             
-            var successArray: [UInt8] = [UInt8(data.count - 1)]
+            var successArray: [UInt8] = Encoder.encodeVarint(UInt(data.count - size.bytesCount))
             successArray.append(contentsOf: ProtocolVersion2().data)
             successArray.append(contentsOf: Status.ok.data)
             successArray.append(contentsOf: subData)

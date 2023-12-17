@@ -30,17 +30,17 @@ extension PairingNetwork {
             
             if !serviceName.isEmpty {
                 array.append(0xa)
-                array.append(UInt8(serviceName.utf8.count))
+                array.append(contentsOf: Encoder.encodeVarint(UInt(serviceName.utf8.count)))
                 array.append(contentsOf: serviceName.utf8)
             }
             
             if !clientName.isEmpty {
                 array.append(0x12)
-                array.append(UInt8(clientName.utf8.count))
+                array.append(contentsOf: Encoder.encodeVarint(UInt(clientName.utf8.count)))
                 array.append(contentsOf: clientName.utf8)
             }
             
-            data.append(contentsOf: [UInt8(array.count)])
+            data.append(contentsOf: Encoder.encodeVarint(UInt(array.count)))
             data.append(contentsOf: array)
             return data
         }

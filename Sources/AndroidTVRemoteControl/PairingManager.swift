@@ -82,13 +82,6 @@ public class PairingManager {
             logger?.errorLog(logPrefix + "host shouldn't be empty!")
         }
         
-        // The sum of the characters count from clientName and serviceName chould be less than 245
-        guard serviceName.utf8.count + clientName.utf8.count < 244 else {
-            pairingState = .error(.toLongNames(description:
-                                                "The clientName and serviceName have too many characters, the combined maximum character count for these fields should be less than 244"))
-            return
-        }
-        
         self.clientName = clientName
         self.serviceName = serviceName
         

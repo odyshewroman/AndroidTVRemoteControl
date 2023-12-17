@@ -53,7 +53,6 @@ public class TLSManager {
             completionHandler(true)
         }, queue)
         
-
         sec_protocol_options_set_challenge_block(options.securityProtocolOptions, { (_, completionHandler) in
             completionHandler(secIdentity)
         }, queue)

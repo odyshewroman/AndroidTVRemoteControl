@@ -23,8 +23,7 @@ extension CommandNetwork {
             self.flags = flags
             
             guard data[8] == 0xa,
-                  let deviceInfo = DeviceInfo(Data(data.dropFirst(9))),
-                  deviceInfo.length + 17 < 256 else {
+                  let deviceInfo = DeviceInfo(Data(data.dropFirst(9))) else {
                 return nil
             }
             

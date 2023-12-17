@@ -54,7 +54,7 @@ struct PairingNetwork {
     }
     
     struct ParingEncoding {
-        var symbolLength: UInt32
+        var symbolLength: UInt8
         var type: EncodingType
         
         var data: Data {
