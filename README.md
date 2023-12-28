@@ -19,7 +19,7 @@ The AndroidTVRemoteControl is supported on iOS version 13 or later and Swift 4 a
 
 In Xcode go to: ```File -> Swift Packages -> Add Package Dependency...```
 
-Enter the CurvedTextView GitHub repository - ```https://github.com/odyshewroman/AndroidTVRemoteControl```
+Enter the AndroidTVRemoteControl GitHub repository - ```https://github.com/odyshewroman/AndroidTVRemoteControl```
 
 Select the version
 
