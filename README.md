@@ -26,7 +26,7 @@ Select the version
 Import AndroidTVRemoteControl module and start to use AndroidTVRemoteControl
 
 ### Cocoapods
-To install CurvedTextView with CocoaPods, add the following lines to your `Podfile`:
+To install AndroidTVRemoteControl with CocoaPods, add the following lines to your `Podfile`:
 
 ```ruby
 pod "AndroidTVRemoteControl"
