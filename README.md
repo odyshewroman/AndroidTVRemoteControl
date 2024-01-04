@@ -51,6 +51,6 @@ Now you can create a **PairingManager**, passing **TLSManager** and **CryptoMana
 
 **Congratulations, you've successfully connected to the Android TV OS device!** If you've paired with this device before, you can skip the pairing and code input step and proceed directly to the command-sending process.
 
-For sending commands, you'll need the **RemoteManager** object. Additionally, set up a closure to handle the connection process states and call the `connect` method. When the *connected* state is reached, you can start sending your messages to the Android TV OS device using the `send` method. In practice, sometimes devices may not respond to the specified message sequences but are already ready to accept commands. In such cases, you can use a short timeout after the connection. If the state does not change to *error* within this timeout, you can consider the device ready to receive your commands.
+For sending commands, you'll need the **RemoteManager** object. Additionally, set up a closure to handle the connection process states and call the `connect` method. When the *connected* state is reached, you can start sending your messages to the Android TV OS device using the `send` method.
 
 <img src="/assets/pairing.png">
