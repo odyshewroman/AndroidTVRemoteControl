@@ -66,7 +66,7 @@ struct SecondConfigurationResponse {
     // incoming data format: [data_length, 162, 1, sub_length, 10, sub_length, 98, runing_app_name_length, runing_app_name_string]
     // For example: [16, 162, 1, 13, 10, 11, 98, 9, 99, 111, 109, 46, 118, 107, 46, 116, 118]
     private func parseCurrentApp(_ data: [UInt8]) -> String? {
-        guard var index = data.firstIndex(of: 162), index > 0 else {
+        guard let index = data.firstIndex(of: 162), index > 0 else {
             return nil
         }
         
@@ -80,13 +80,15 @@ struct SecondConfigurationResponse {
         }
         
         guard data.indices.contains(index + 1), data[index + 1] == 1,
-              data.indices.contains(index + 3), data[index + 3] == 10,
-              data.indices.contains(index + 5), data[index + 5] == 98,
-              data.indices.contains(index + 6) else {
+              data.indices.contains(index + 3), data[index + 3] == 10 else {
             return nil
         }
         
-        index += 6
+        guard var index = data.firstIndex(of: 98), data.indices.contains(index + 1) else {
+            return nil
+        }
+        
+        index += 1
         let appNameLength = Int(data[index])
         if data.count <= index + appNameLength {
             return nil
