@@ -28,8 +28,10 @@ public class RemoteManager {
     
     private var remoteState: RemoteState = .idle {
         didSet {
+            let state = remoteState
+            
             stateQueue.async {
-                switch self.remoteState {
+                switch state {
                 case .error(let error):
                     self.logger?.errorLog(self.logPrefix + error.localizedDescription)
                 case .connected:
@@ -50,7 +52,7 @@ public class RemoteManager {
                     self.logger?.infoLog(self.logPrefix + "paired, current running app: " + (runningApp ?? "Unknown"))
                 }
                 
-                self.stateChanged?(self.remoteState)
+                self.stateChanged?(state)
             }
         }
     }

@@ -32,8 +32,10 @@ public class PairingManager {
     
     private var pairingState: PairingState = .idle {
         didSet {
+            let state = pairingState
+            
             stateQueue.async {
-                switch self.pairingState {
+                switch state {
                 case .idle:
                     self.logger?.infoLog(self.logPrefix + "idle")
                 case .extractTLSparams:
@@ -66,7 +68,7 @@ public class PairingManager {
                     self.logger?.errorLog(self.logPrefix + error.localizedDescription)
                 }
                 
-                self.stateChanged?(self.pairingState)
+                self.stateChanged?(state)
             }
         }
     }
