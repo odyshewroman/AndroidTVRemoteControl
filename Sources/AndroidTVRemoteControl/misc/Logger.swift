@@ -16,6 +16,8 @@ public protocol Logger {
 }
 
 public class DefaultLogger: Logger {
+    public init() {}
+    
     public func debugLog(_ str: String) {
         log("Debug: " + str)
     }
