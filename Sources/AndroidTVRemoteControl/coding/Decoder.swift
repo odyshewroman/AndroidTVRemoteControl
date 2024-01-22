@@ -23,7 +23,7 @@ class Decoder {
         for byte in data {
             value |= (UInt(byte) & 0x7f) << shift
             if byte & 0x80 == 0 {
-                return (value, Int(shift) % 7 + 1)
+                return (value, Int(shift) / 7 + 1)
             }
             
             shift += 7
@@ -33,6 +33,6 @@ class Decoder {
             }
         }
         
-        return (value, Int(shift) % 7 + 1)
+        return (value, Int(shift) / 7 + 1)
     }
 }
