@@ -85,6 +85,7 @@ public class RemoteManager {
         
         connection?.stateUpdateHandler = handleConnectionState
         logger?.infoLog(logPrefix + "connecting " + host + ":6466")
+        secondConfigurationResponse = SecondConfigurationResponse()
         connection?.start(queue: remoteQueue)
     }
     
