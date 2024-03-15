@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C50B5F7D2BA4C0C700E6E64C /* VoiceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B5F7C2BA4C0C700E6E64C /* VoiceConfig.swift */; };
 		C591B96C2AE1CEED00A50131 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B96B2AE1CEED00A50131 /* AppDelegate.swift */; };
 		C591B96E2AE1CEED00A50131 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B96D2AE1CEED00A50131 /* SceneDelegate.swift */; };
 		C591B9702AE1CEED00A50131 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B96F2AE1CEED00A50131 /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C50B5F7C2BA4C0C700E6E64C /* VoiceConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceConfig.swift; sourceTree = "<group>"; };
 		C591B9682AE1CEED00A50131 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C591B96B2AE1CEED00A50131 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C591B96D2AE1CEED00A50131 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C50B5F7B2BA4C0A400E6E64C /* Voice */ = {
+			isa = PBXGroup;
+			children = (
+				C50B5F7C2BA4C0C700E6E64C /* VoiceConfig.swift */,
+			);
+			name = Voice;
+			sourceTree = "<group>";
+		};
 		C591B95F2AE1CEED00A50131 = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +191,7 @@
 		C5B25B482AFBCCA700BE8743 /* Commands */ = {
 			isa = PBXGroup;
 			children = (
+				C50B5F7B2BA4C0A400E6E64C /* Voice */,
 				C5B25B4B2AFBCCCC00BE8743 /* DeepLink.swift */,
 				C5B25B492AFBCCCC00BE8743 /* Direction.swift */,
 				C5B25B4A2AFBCCCC00BE8743 /* Key.swift */,
@@ -302,6 +313,7 @@
 				C591B9D72AE23CD600A50131 /* AndroidTVConfigurationMessage.swift in Sources */,
 				C591B9BD2AE23C7A00A50131 /* CertManager.swift in Sources */,
 				C5E26BDC2B2F33A6007D7E08 /* Encoder.swift in Sources */,
+				C50B5F7D2BA4C0C700E6E64C /* VoiceConfig.swift in Sources */,
 				C591B9BA2AE23C7A00A50131 /* PairingManager.swift in Sources */,
 				C5E26BD62B2025D4007D7E08 /* Result.swift in Sources */,
 				C5EFFD182B0B9B0B00B35F8B /* VolumeLevel.swift in Sources */,
