@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C50B5F7D2BA4C0C700E6E64C /* VoiceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B5F7C2BA4C0C700E6E64C /* VoiceConfig.swift */; };
+		C50B5F7F2BA5FE1300E6E64C /* VoiceBegin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B5F7E2BA5FE1300E6E64C /* VoiceBegin.swift */; };
 		C591B96C2AE1CEED00A50131 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B96B2AE1CEED00A50131 /* AppDelegate.swift */; };
 		C591B96E2AE1CEED00A50131 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B96D2AE1CEED00A50131 /* SceneDelegate.swift */; };
 		C591B9702AE1CEED00A50131 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591B96F2AE1CEED00A50131 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		C50B5F7C2BA4C0C700E6E64C /* VoiceConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceConfig.swift; sourceTree = "<group>"; };
+		C50B5F7E2BA5FE1300E6E64C /* VoiceBegin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceBegin.swift; sourceTree = "<group>"; };
 		C591B9682AE1CEED00A50131 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C591B96B2AE1CEED00A50131 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C591B96D2AE1CEED00A50131 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				C50B5F7C2BA4C0C700E6E64C /* VoiceConfig.swift */,
+				C50B5F7E2BA5FE1300E6E64C /* VoiceBegin.swift */,
 			);
 			name = Voice;
 			sourceTree = "<group>";
@@ -246,7 +249,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					C591B9672AE1CEED00A50131 = {
 						CreatedOnToolsVersion = 14.3;
@@ -321,6 +324,7 @@
 				C591B96C2AE1CEED00A50131 /* AppDelegate.swift in Sources */,
 				C5E26BDB2B2F33A6007D7E08 /* Decoder.swift in Sources */,
 				C591B96E2AE1CEED00A50131 /* SceneDelegate.swift in Sources */,
+				C50B5F7F2BA5FE1300E6E64C /* VoiceBegin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +367,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -423,6 +428,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
