@@ -33,12 +33,16 @@ extension CommandNetwork {
                 return
             }
             
-            guard let endIndex = data.lastIndex(of: 16) else {
+            guard var endIndex = data.firstIndex(of: 16) else {
                 return nil
             }
             
             guard endIndex > 3, data.count > endIndex else {
                 return nil
+            }
+            
+            if (data[endIndex + 1] == 16) {
+                endIndex += 1
             }
             
             val1 = Array(data[startIndex..<endIndex])
