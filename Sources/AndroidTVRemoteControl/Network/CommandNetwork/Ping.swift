@@ -41,7 +41,7 @@ extension CommandNetwork {
                 return nil
             }
             
-            if (data[endIndex + 1] == 16) {
+            if data.indices.contains(endIndex + 1), data[endIndex + 1] == 16 {
                 endIndex += 1
             }
             
