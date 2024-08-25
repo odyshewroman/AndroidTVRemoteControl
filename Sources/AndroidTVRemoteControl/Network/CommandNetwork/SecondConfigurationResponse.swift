@@ -56,7 +56,16 @@ struct SecondConfigurationResponse {
             return false
         }
         
-        if let index = data.firstIndex(of: 194), Array(data[index..<(index + pattern.count)]) == pattern {
+        guard let index = data.firstIndex(of: 194) else {
+            return false
+        }
+        
+        let powerPartLength = index + pattern.count
+        guard powerPartLength <= data.count else {
+            return false
+        }
+        
+        if Array(data[index..<powerPartLength]) == pattern {
             return true
         }
         
