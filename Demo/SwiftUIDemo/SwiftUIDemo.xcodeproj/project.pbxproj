@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		76D20B412DD31EFC0015BF98 /* cert.der in Resources */ = {isa = PBXBuildFile; fileRef = 76D20B402DD31EFC0015BF98 /* cert.der */; };
+		76D20B432DD31F010015BF98 /* cert.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 76D20B422DD31F010015BF98 /* cert.p12 */; };
+		76DF1F732DD25A1F00FFDF1A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1F6F2DD25A1E00FFDF1A /* ContentView.swift */; };
+		76DF1F742DD25A1F00FFDF1A /* SwiftUIDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1F712DD25A1E00FFDF1A /* SwiftUIDemoApp.swift */; };
+		76DF1F752DD25A1F00FFDF1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76DF1F6E2DD25A1E00FFDF1A /* Assets.xcassets */; };
+		76DF1FD32DD25A4600FFDF1A /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FB22DD25A4600FFDF1A /* Decoder.swift */; };
+		76DF1FD42DD25A4600FFDF1A /* VolumeLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FC22DD25A4600FFDF1A /* VolumeLevel.swift */; };
+		76DF1FD52DD25A4600FFDF1A /* SecondConfigurationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FC12DD25A4600FFDF1A /* SecondConfigurationResponse.swift */; };
+		76DF1FD62DD25A4600FFDF1A /* Pairing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FC62DD25A4600FFDF1A /* Pairing.swift */; };
+		76DF1FD72DD25A4600FFDF1A /* PairingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FCF2DD25A4600FFDF1A /* PairingManager.swift */; };
+		76DF1FD82DD25A4600FFDF1A /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FCE2DD25A4600FFDF1A /* Errors.swift */; };
+		76DF1FD92DD25A4600FFDF1A /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FB32DD25A4600FFDF1A /* Encoder.swift */; };
+		76DF1FDA2DD25A4600FFDF1A /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FC82DD25A4600FFDF1A /* Secret.swift */; };
+		76DF1FDB2DD25A4600FFDF1A /* TLSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FD12DD25A4600FFDF1A /* TLSManager.swift */; };
+		76DF1FDC2DD25A4600FFDF1A /* PairingNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FC72DD25A4600FFDF1A /* PairingNetwork.swift */; };
+		76DF1FDD2DD25A4600FFDF1A /* CommandNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FBE2DD25A4600FFDF1A /* CommandNetwork.swift */; };
+		76DF1FDE2DD25A4600FFDF1A /* SecodConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FC02DD25A4600FFDF1A /* SecodConfiguration.swift */; };
+		76DF1FDF2DD25A4600FFDF1A /* RequestDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FCA2DD25A4600FFDF1A /* RequestDataProtocol.swift */; };
+		76DF1FE02DD25A4600FFDF1A /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FC52DD25A4600FFDF1A /* Option.swift */; };
+		76DF1FE12DD25A4600FFDF1A /* Ping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FBF2DD25A4600FFDF1A /* Ping.swift */; };
+		76DF1FE22DD25A4600FFDF1A /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FB62DD25A4600FFDF1A /* Direction.swift */; };
+		76DF1FE32DD25A4600FFDF1A /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FC42DD25A4600FFDF1A /* Configuration.swift */; };
+		76DF1FE42DD25A4600FFDF1A /* DeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FB52DD25A4600FFDF1A /* DeepLink.swift */; };
+		76DF1FE52DD25A4600FFDF1A /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FB72DD25A4600FFDF1A /* Key.swift */; };
+		76DF1FE62DD25A4600FFDF1A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FBB2DD25A4600FFDF1A /* Result.swift */; };
+		76DF1FE72DD25A4600FFDF1A /* KeyPress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FB82DD25A4600FFDF1A /* KeyPress.swift */; };
+		76DF1FE82DD25A4600FFDF1A /* AndroidTVConfigurationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FBD2DD25A4600FFDF1A /* AndroidTVConfigurationMessage.swift */; };
+		76DF1FE92DD25A4600FFDF1A /* RemoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FD02DD25A4600FFDF1A /* RemoteManager.swift */; };
+		76DF1FEA2DD25A4600FFDF1A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FBA2DD25A4600FFDF1A /* Logger.swift */; };
+		76DF1FEB2DD25A4600FFDF1A /* CertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FCC2DD25A4600FFDF1A /* CertManager.swift */; };
+		76DF1FEC2DD25A4600FFDF1A /* CryptoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF1FCD2DD25A4600FFDF1A /* CryptoManager.swift */; };
+		76DF20392DD25B6A00FFDF1A /* RemoteTVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF20382DD25B6A00FFDF1A /* RemoteTVManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		76D20B402DD31EFC0015BF98 /* cert.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = cert.der; sourceTree = "<group>"; };
+		76D20B422DD31F010015BF98 /* cert.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cert.p12; sourceTree = "<group>"; };
+		76DF1F1C2DD1E5DF00FFDF1A /* SwiftUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		76DF1F6E2DD25A1E00FFDF1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		76DF1F6F2DD25A1E00FFDF1A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		76DF1F702DD25A1E00FFDF1A /* SwiftUIDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUIDemo.entitlements; sourceTree = "<group>"; };
+		76DF1F712DD25A1E00FFDF1A /* SwiftUIDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemoApp.swift; sourceTree = "<group>"; };
+		76DF1FB22DD25A4600FFDF1A /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		76DF1FB32DD25A4600FFDF1A /* Encoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encoder.swift; sourceTree = "<group>"; };
+		76DF1FB52DD25A4600FFDF1A /* DeepLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLink.swift; sourceTree = "<group>"; };
+		76DF1FB62DD25A4600FFDF1A /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		76DF1FB72DD25A4600FFDF1A /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		76DF1FB82DD25A4600FFDF1A /* KeyPress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPress.swift; sourceTree = "<group>"; };
+		76DF1FBA2DD25A4600FFDF1A /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		76DF1FBB2DD25A4600FFDF1A /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		76DF1FBD2DD25A4600FFDF1A /* AndroidTVConfigurationMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndroidTVConfigurationMessage.swift; sourceTree = "<group>"; };
+		76DF1FBE2DD25A4600FFDF1A /* CommandNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandNetwork.swift; sourceTree = "<group>"; };
+		76DF1FBF2DD25A4600FFDF1A /* Ping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ping.swift; sourceTree = "<group>"; };
+		76DF1FC02DD25A4600FFDF1A /* SecodConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecodConfiguration.swift; sourceTree = "<group>"; };
+		76DF1FC12DD25A4600FFDF1A /* SecondConfigurationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondConfigurationResponse.swift; sourceTree = "<group>"; };
+		76DF1FC22DD25A4600FFDF1A /* VolumeLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeLevel.swift; sourceTree = "<group>"; };
+		76DF1FC42DD25A4600FFDF1A /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		76DF1FC52DD25A4600FFDF1A /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		76DF1FC62DD25A4600FFDF1A /* Pairing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pairing.swift; sourceTree = "<group>"; };
+		76DF1FC72DD25A4600FFDF1A /* PairingNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingNetwork.swift; sourceTree = "<group>"; };
+		76DF1FC82DD25A4600FFDF1A /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
+		76DF1FCA2DD25A4600FFDF1A /* RequestDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDataProtocol.swift; sourceTree = "<group>"; };
+		76DF1FCC2DD25A4600FFDF1A /* CertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertManager.swift; sourceTree = "<group>"; };
+		76DF1FCD2DD25A4600FFDF1A /* CryptoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoManager.swift; sourceTree = "<group>"; };
+		76DF1FCE2DD25A4600FFDF1A /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		76DF1FCF2DD25A4600FFDF1A /* PairingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingManager.swift; sourceTree = "<group>"; };
+		76DF1FD02DD25A4600FFDF1A /* RemoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteManager.swift; sourceTree = "<group>"; };
+		76DF1FD12DD25A4600FFDF1A /* TLSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLSManager.swift; sourceTree = "<group>"; };
+		76DF20382DD25B6A00FFDF1A /* RemoteTVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTVManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		76DF1F192DD1E5DF00FFDF1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		76DF1F132DD1E5DF00FFDF1A = {
+			isa = PBXGroup;
+			children = (
+				76DF1F722DD25A1E00FFDF1A /* SwiftUIDemo */,
+				76DF1F1D2DD1E5DF00FFDF1A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		76DF1F1D2DD1E5DF00FFDF1A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76DF1F1C2DD1E5DF00FFDF1A /* SwiftUIDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76DF1F722DD25A1E00FFDF1A /* SwiftUIDemo */ = {
+			isa = PBXGroup;
+			children = (
+				76DF20382DD25B6A00FFDF1A /* RemoteTVManager.swift */,
+				76DF1FD22DD25A4600FFDF1A /* AndroidTVRemoteControl */,
+				76DF1F6E2DD25A1E00FFDF1A /* Assets.xcassets */,
+				76DF1F6F2DD25A1E00FFDF1A /* ContentView.swift */,
+				76DF1F702DD25A1E00FFDF1A /* SwiftUIDemo.entitlements */,
+				76DF1F712DD25A1E00FFDF1A /* SwiftUIDemoApp.swift */,
+				76D20B402DD31EFC0015BF98 /* cert.der */,
+				76D20B422DD31F010015BF98 /* cert.p12 */,
+			);
+			path = SwiftUIDemo;
+			sourceTree = "<group>";
+		};
+		76DF1FB42DD25A4600FFDF1A /* coding */ = {
+			isa = PBXGroup;
+			children = (
+				76DF1FB22DD25A4600FFDF1A /* Decoder.swift */,
+				76DF1FB32DD25A4600FFDF1A /* Encoder.swift */,
+			);
+			path = coding;
+			sourceTree = "<group>";
+		};
+		76DF1FB92DD25A4600FFDF1A /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				76DF1FB52DD25A4600FFDF1A /* DeepLink.swift */,
+				76DF1FB62DD25A4600FFDF1A /* Direction.swift */,
+				76DF1FB72DD25A4600FFDF1A /* Key.swift */,
+				76DF1FB82DD25A4600FFDF1A /* KeyPress.swift */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
+		76DF1FBC2DD25A4600FFDF1A /* misc */ = {
+			isa = PBXGroup;
+			children = (
+				76DF1FBA2DD25A4600FFDF1A /* Logger.swift */,
+				76DF1FBB2DD25A4600FFDF1A /* Result.swift */,
+			);
+			path = misc;
+			sourceTree = "<group>";
+		};
+		76DF1FC32DD25A4600FFDF1A /* CommandNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				76DF1FBD2DD25A4600FFDF1A /* AndroidTVConfigurationMessage.swift */,
+				76DF1FBE2DD25A4600FFDF1A /* CommandNetwork.swift */,
+				76DF1FBF2DD25A4600FFDF1A /* Ping.swift */,
+				76DF1FC02DD25A4600FFDF1A /* SecodConfiguration.swift */,
+				76DF1FC12DD25A4600FFDF1A /* SecondConfigurationResponse.swift */,
+				76DF1FC22DD25A4600FFDF1A /* VolumeLevel.swift */,
+			);
+			path = CommandNetwork;
+			sourceTree = "<group>";
+		};
+		76DF1FC92DD25A4600FFDF1A /* PairingNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				76DF1FC42DD25A4600FFDF1A /* Configuration.swift */,
+				76DF1FC52DD25A4600FFDF1A /* Option.swift */,
+				76DF1FC62DD25A4600FFDF1A /* Pairing.swift */,
+				76DF1FC72DD25A4600FFDF1A /* PairingNetwork.swift */,
+				76DF1FC82DD25A4600FFDF1A /* Secret.swift */,
+			);
+			path = PairingNetwork;
+			sourceTree = "<group>";
+		};
+		76DF1FCB2DD25A4600FFDF1A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				76DF1FC32DD25A4600FFDF1A /* CommandNetwork */,
+				76DF1FC92DD25A4600FFDF1A /* PairingNetwork */,
+				76DF1FCA2DD25A4600FFDF1A /* RequestDataProtocol.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		76DF1FD22DD25A4600FFDF1A /* AndroidTVRemoteControl */ = {
+			isa = PBXGroup;
+			children = (
+				76DF1FB42DD25A4600FFDF1A /* coding */,
+				76DF1FB92DD25A4600FFDF1A /* Commands */,
+				76DF1FBC2DD25A4600FFDF1A /* misc */,
+				76DF1FCB2DD25A4600FFDF1A /* Network */,
+				76DF1FCC2DD25A4600FFDF1A /* CertManager.swift */,
+				76DF1FCD2DD25A4600FFDF1A /* CryptoManager.swift */,
+				76DF1FCE2DD25A4600FFDF1A /* Errors.swift */,
+				76DF1FCF2DD25A4600FFDF1A /* PairingManager.swift */,
+				76DF1FD02DD25A4600FFDF1A /* RemoteManager.swift */,
+				76DF1FD12DD25A4600FFDF1A /* TLSManager.swift */,
+			);
+			name = AndroidTVRemoteControl;
+			path = /Users/floriangabach/Documents/Apps/AndroidTVRemoteControl/Sources/AndroidTVRemoteControl;
+			sourceTree = "<absolute>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		76DF1F1B2DD1E5DF00FFDF1A /* SwiftUIDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76DF1F282DD1E5E100FFDF1A /* Build configuration list for PBXNativeTarget "SwiftUIDemo" */;
+			buildPhases = (
+				76DF1F182DD1E5DF00FFDF1A /* Sources */,
+				76DF1F192DD1E5DF00FFDF1A /* Frameworks */,
+				76DF1F1A2DD1E5DF00FFDF1A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftUIDemo;
+			packageProductDependencies = (
+			);
+			productName = SwiftUIDemo;
+			productReference = 76DF1F1C2DD1E5DF00FFDF1A /* SwiftUIDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		76DF1F142DD1E5DF00FFDF1A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					76DF1F1B2DD1E5DF00FFDF1A = {
+						CreatedOnToolsVersion = 16.3;
+					};
+				};
+			};
+			buildConfigurationList = 76DF1F172DD1E5DF00FFDF1A /* Build configuration list for PBXProject "SwiftUIDemo" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 76DF1F132DD1E5DF00FFDF1A;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 76DF1F1D2DD1E5DF00FFDF1A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				76DF1F1B2DD1E5DF00FFDF1A /* SwiftUIDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		76DF1F1A2DD1E5DF00FFDF1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76D20B412DD31EFC0015BF98 /* cert.der in Resources */,
+				76D20B432DD31F010015BF98 /* cert.p12 in Resources */,
+				76DF1F752DD25A1F00FFDF1A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76DF1F182DD1E5DF00FFDF1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76DF1F732DD25A1F00FFDF1A /* ContentView.swift in Sources */,
+				76DF1F742DD25A1F00FFDF1A /* SwiftUIDemoApp.swift in Sources */,
+				76DF1FD32DD25A4600FFDF1A /* Decoder.swift in Sources */,
+				76DF1FD42DD25A4600FFDF1A /* VolumeLevel.swift in Sources */,
+				76DF1FD52DD25A4600FFDF1A /* SecondConfigurationResponse.swift in Sources */,
+				76DF1FD62DD25A4600FFDF1A /* Pairing.swift in Sources */,
+				76DF1FD72DD25A4600FFDF1A /* PairingManager.swift in Sources */,
+				76DF1FD82DD25A4600FFDF1A /* Errors.swift in Sources */,
+				76DF1FD92DD25A4600FFDF1A /* Encoder.swift in Sources */,
+				76DF1FDA2DD25A4600FFDF1A /* Secret.swift in Sources */,
+				76DF1FDB2DD25A4600FFDF1A /* TLSManager.swift in Sources */,
+				76DF1FDC2DD25A4600FFDF1A /* PairingNetwork.swift in Sources */,
+				76DF1FDD2DD25A4600FFDF1A /* CommandNetwork.swift in Sources */,
+				76DF1FDE2DD25A4600FFDF1A /* SecodConfiguration.swift in Sources */,
+				76DF1FDF2DD25A4600FFDF1A /* RequestDataProtocol.swift in Sources */,
+				76DF1FE02DD25A4600FFDF1A /* Option.swift in Sources */,
+				76DF1FE12DD25A4600FFDF1A /* Ping.swift in Sources */,
+				76DF1FE22DD25A4600FFDF1A /* Direction.swift in Sources */,
+				76DF1FE32DD25A4600FFDF1A /* Configuration.swift in Sources */,
+				76DF1FE42DD25A4600FFDF1A /* DeepLink.swift in Sources */,
+				76DF1FE52DD25A4600FFDF1A /* Key.swift in Sources */,
+				76DF1FE62DD25A4600FFDF1A /* Result.swift in Sources */,
+				76DF1FE72DD25A4600FFDF1A /* KeyPress.swift in Sources */,
+				76DF1FE82DD25A4600FFDF1A /* AndroidTVConfigurationMessage.swift in Sources */,
+				76DF1FE92DD25A4600FFDF1A /* RemoteManager.swift in Sources */,
+				76DF20392DD25B6A00FFDF1A /* RemoteTVManager.swift in Sources */,
+				76DF1FEA2DD25A4600FFDF1A /* Logger.swift in Sources */,
+				76DF1FEB2DD25A4600FFDF1A /* CertManager.swift in Sources */,
+				76DF1FEC2DD25A4600FFDF1A /* CryptoManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		76DF1F262DD1E5E100FFDF1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = M3TP5VX25W;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		76DF1F272DD1E5E100FFDF1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = M3TP5VX25W;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		76DF1F292DD1E5E100FFDF1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftUIDemo/SwiftUIDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 62PP362QNQ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.androidremotetv.demo.SwiftUIDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.4;
+			};
+			name = Debug;
+		};
+		76DF1F2A2DD1E5E100FFDF1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftUIDemo/SwiftUIDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 62PP362QNQ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.androidremotetv.demo.SwiftUIDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.4;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		76DF1F172DD1E5DF00FFDF1A /* Build configuration list for PBXProject "SwiftUIDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76DF1F262DD1E5E100FFDF1A /* Debug */,
+				76DF1F272DD1E5E100FFDF1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76DF1F282DD1E5E100FFDF1A /* Build configuration list for PBXNativeTarget "SwiftUIDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76DF1F292DD1E5E100FFDF1A /* Debug */,
+				76DF1F2A2DD1E5E100FFDF1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 76DF1F142DD1E5DF00FFDF1A /* Project object */;
+}
