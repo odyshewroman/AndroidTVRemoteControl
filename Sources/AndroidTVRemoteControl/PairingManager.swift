@@ -79,7 +79,7 @@ public class PairingManager {
         self.logger = logger
     }
     
-    public func connect(_ host: String, _ clientName: String, _ serviceName: String) {
+    public func connect(_ host: String, _ clientName: String, _ serviceName: String, timeout: Int = 60) {
         if host.isEmpty {
             logger?.errorLog(logPrefix + "host shouldn't be empty!")
         }
@@ -91,7 +91,7 @@ public class PairingManager {
         
         let tlsParams: NWParameters
 
-        switch tlsManager.getNWParams(connectQueue) {
+        switch tlsManager.getNWParams(connectQueue, timeout: timeout) {
         case .Result(let params):
             tlsParams = params
         case .Error(let error):
